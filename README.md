@@ -54,3 +54,46 @@
 ##### Aunque algunas variables presentan valores faltantes, estos son limitados y se pueden tratar fácilmente mediante imputación o categorización (“desconocido”). Esto permite conservar la mayoría de los registros y mantener la integridad del análisis sin comprometer los resultados.
 ### Versatilidad para diferentes tipos de análisis
 ##### La estructura tabular de esta base permite realizar análisis univariado, multivariado, correlaciones, tablas cruzadas y visualizaciones estadísticas de manera directa, cumpliendo con todos los requerimientos de la fase 2 (EDA).
+
+
+
+# Insights principales del EDA
+
+A partir del análisis exploratorio de datos realizado sobre el dataset *Adult Income*, se identificaron los siguientes hallazgos relevantes:
+
+---
+
+## 1. Presencia significativa de datos faltantes en variables clave
+Se identificó que variables como `workclass`, `occupation` y `native-country` presentaban una cantidad considerable de valores faltantes. Este problema fue abordado mediante la imputación de la categoría `"Unknown"`, permitiendo conservar los registros sin perder información relevante.
+
+---
+
+## 2. Existencia de numerosos valores atípicos en variables numéricas
+Variables como `capital-gain`, `capital-loss` y `hours-per-week` presentan una alta cantidad de valores atípicos (outliers), lo que indica la presencia de comportamientos extremos dentro de la población analizada.
+
+---
+
+## 3. Distribuciones altamente sesgadas en variables económicas
+Las variables `capital-gain` y `capital-loss` presentan una fuerte asimetría positiva, con una gran concentración de valores en cero y algunos valores extremadamente altos. Esto sugiere la necesidad de aplicar transformaciones (como logaritmos) para mejorar su análisis.
+
+---
+
+## 4. Predominio de ciertas categorías en variables categóricas
+Se observa una alta concentración en categorías específicas como `Private` en `workclass`, `HS-grad` en educación, `Male` en género y `United-States` en país de origen, evidenciando un desbalance en la distribución de estas variables.
+
+---
+
+## 5. Relación clara entre nivel educativo e ingresos
+El análisis de tablas cruzadas evidencia que a mayor nivel educativo, mayor es la proporción de individuos con ingresos superiores a 50K, lo que sugiere una relación directa entre educación y nivel de ingresos.
+
+---
+
+## 6. Relación entre variables laborales y nivel de ingreso
+Los análisis multivariados muestran que variables como `hours-per-week` y `capital-gain` presentan diferencias relevantes según el nivel de ingreso, indicando que estas variables pueden influir en la clasificación del ingreso.
+
+---
+
+## 7. Correlaciones débiles entre variables numéricas
+El análisis de correlación indica que no existen relaciones lineales fuertes entre la mayoría de variables numéricas, lo que sugiere que el ingreso depende de múltiples factores y no de una sola variable dominante.
+
+---
